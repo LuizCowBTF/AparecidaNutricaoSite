@@ -6,6 +6,8 @@ botaoAdicionar.addEventListener("click", function(){
     xhr.open("GET", "https://raw.githubusercontent.com/loresgarcia/Pacientes-API/master/pacientes.json");
     xhr.addEventListener("load", function(){
         if(xhr.status == 200){
+            var erroAjax = document.querySelector("#erro-ajax");
+            erroAjax.classList.add("invisivel");
             var resposta = xhr.responseText;
             console.log(resposta);
             var pacientes = JSON.parse(resposta);
@@ -16,7 +18,6 @@ botaoAdicionar.addEventListener("click", function(){
         }else{
             console.log(xhr.status);
             console.log(xhr.responseText);
-            var erroAjax = document.querySelector("#erro-ajax");
             erroAjax.classList.remove("invisivel");
         }
 
