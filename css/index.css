@@ -141,3 +141,19 @@ button[disabled=disabled], button:disabled {
 	color: red;
 	padding: 15px;
 }
+
+.fadeOut {
+	opacity: 0;
+	transition: 0.5s;
+}
+
+#filtrar-tabela {
+	width: 250px;
+	height: 40px;
+	margin: 10px 0px;
+	padding: 15px;
+}
+
+.invisivel {
+	display: none;
+}
